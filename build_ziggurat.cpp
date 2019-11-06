@@ -3,7 +3,7 @@
 
 using namespace std;
 
-vector <vector <int>> build_ziggurat(int &n)
+vector <vector <int>> build_ziggurat(const int &n)
 {
 	vector <vector <int>> ziggurat(n, vector <int> (n));
 	for (int k = 0; k < (n + 1) / 2; k++)
