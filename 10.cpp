@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -18,7 +18,7 @@ void cube_sum(const int& n, vector <int> &ans)
 	int l = 0, r = n + 1;
 	while (r - l > 1)
 	{
-		int m = (r + l) / 2;
+		long long m = (r + l) / 2;
 		if (m * m * m <= n)
 		{
 			l = m;
@@ -40,9 +40,16 @@ int main()
 	cube_sum(n, ans);
 
 	size_t ans_size = ans.size();
+	if (ans_size > 8)
+	{
+		cout << "impossible";
+		return 0;
+	}
 
 	for (int i = 0; i < ans_size; i++)
 	{
 		cout << ans[i] << ' ';
 	}
+
+	return 0;
 }
