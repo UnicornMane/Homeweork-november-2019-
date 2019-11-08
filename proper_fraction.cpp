@@ -1,7 +1,11 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 
 using namespace std;
+
+int gcd(int a, int b);
+vector <int> sieve_of_eratosthenes(const int& n);
+int proper_fraction(int& n);
 
 int gcd(int a, int b)
 {
